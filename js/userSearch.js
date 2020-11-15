@@ -23,7 +23,6 @@ function buscar(){
               },
               error: function(e) {
 
-               
                 console.log(e);
              }
           });
@@ -43,7 +42,7 @@ function post(resul){
         *PESONAL INFO
         */
         var seccion = document.getElementById("topcolumn");
-        //seccion.innerHTML = "";
+        seccion.innerHTML = "";
         
 
         //Imagen
@@ -106,12 +105,9 @@ function post(resul){
         cuentas.innerHTML = "Personal Accounts:";
        
         var ttt = document.getElementById("t");//content
-        ttt.innerHTML=""
         var cuentas = document.createElement("H2");
         cuentas.innerHTML = "Personal Accounts:";
         ttt.appendChild(cuentas);
-        var content2 = document.getElementById("row text-center");//content
-        content.innerHTML=""
         for (let i = 0; i< resul.person.links.length; i++) {
 
           var url = resul.person.links[i];
@@ -119,7 +115,7 @@ function post(resul){
           *EXTERNAL LINKS
           */ 
           //Get container div
-         
+          var content2 = document.getElementById("row text-center");//content
          
           //col-lg-3 col-md-6 mb-4
           var div2 = document.createElement("DIV");
